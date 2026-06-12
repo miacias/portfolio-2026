@@ -1,8 +1,8 @@
 import { filterRepos, setProjectDetails } from "@/utils/githubRepos";
-import { Project } from "./Project";
+import { Project } from "@/components/Project";
 import type { ProjectDetails } from "@/interfaces";
 
-export const ProjectList = async () => {
+export default async function ProjectsPage() {
   let projectData: ProjectDetails[] | null = null;
 
   const query = `
@@ -59,14 +59,7 @@ export const ProjectList = async () => {
   }
 
   return (
-    <div className="project-list-section bg-orange-100 min-h-screen flex items-center justify-center md:px-16 px-8">
-      {/* <div className="relative w-full max-w-lg"> */}
-        {/* <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob "></div>
-        <div className="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-80 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-32 left-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div> */}
-
+    <div className="project-list-section min-h-screen flex items-center justify-center md:px-16 px-8">
         <div className="m-8 relative space-y-4">
           {projectData &&
             projectData.length > 0 &&
@@ -74,7 +67,6 @@ export const ProjectList = async () => {
               return <Project key={project.name} project={project} />;
             })}
         </div>
-      {/* </div> */}
     </div>
   );
-};
+}

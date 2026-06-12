@@ -19,6 +19,7 @@ interface ProjectDetails extends GithubRepo {
   demoLink?: string | null;
   deployedLink?: string | null;
   topics?: string[] | null;
+  isFeatured?: boolean;
 }
 
 export type { GithubRepo, ProjectDetails };

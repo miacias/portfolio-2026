@@ -95,7 +95,8 @@ const card: React.CSSProperties = {
   justifyContent: "center",
   alignItems: "center",
   borderRadius: 20,
-  background: "#f5f5f5",
+  // background: "#f5f5f5",
+  background: "#fff2f2",
   boxShadow:
     "0 0 1px hsl(0deg 0% 0% / 0.075), 0 0 2px hsl(0deg 0% 0% / 0.075), 0 0 4px hsl(0deg 0% 0% / 0.075), 0 0 8px hsl(0deg 0% 0% / 0.075), 0 0 16px hsl(0deg 0% 0% / 0.075)",
   transformOrigin: "10% 60%",

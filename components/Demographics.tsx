@@ -1,6 +1,6 @@
 export const Demographics = () => {
   return (
-    <ul className="text-left text-sm text-gray-600 dark:text-gray-400 mb-4">
+    <ul className="text-left text-sm text-gray-600 dark:text-gray-300 mb-4">
       <li>Full Stack Software Developer</li>
       <li>Based in USA</li>
       <li>

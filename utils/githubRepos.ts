@@ -22,12 +22,14 @@ const projects = [
     url: "" /*"https://github.com/miacias/alternate-universes"*/,
     createdDate: "March 25, 2024",
     updatedDate: "October 1st, 2025",
+    isFeatured: true,
   },
   {
     name: "d3-test",
     formattedName: "D3 Test",
     description:
       "A project that explores the capabilities of D3.js for creating interactive data visualizations of maps.",
+    isFeatured: true,
   },
   {
     name: "lees-cleaners",
@@ -116,6 +118,7 @@ export const setProjectDetails = (
         formattedName: project.formattedName || formatName(repo.name),
         demoLink: findDemoVideo(project.formattedName || repo.name),
         description: project.description || repo.description,
+        isFeatured: project.isFeatured || false,
       };
     } else {
       // Create project details from projects array only
@@ -130,6 +133,7 @@ export const setProjectDetails = (
         createdAt: project.createdDate || "",
         updatedAt: project.updatedDate || "",
         repositoryTopics: project.repositoryTopics || { nodes: [] },
+        isFeatured: project.isFeatured || false,
       };
     }
   });

@@ -1,16 +1,17 @@
-import { BusinessCard, Demographics, ProjectList } from "@/components";
+import { BusinessCard, Demographics, Navigation, ProjectList } from "@/components";
 
 export default function Home() {
   return (
-    <>
-      {/* <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start"> */}
-      <main>
-        <div className='flex flex-col md:flex-row justify-center items-center md:items-end gap-16'>
-          <BusinessCard />
-          <Demographics />
-        </div>
-        <ProjectList />
-      </main>
-    </>
+    <main className="min-h-screen bg-gradient-to-b from-gray-100 via-gray-50 to-white">
+      <header className="header relative flex flex-col md:flex-row justify-center items-center md:items-end gap-16 bg-gradient-to-b from-black via-gray-900 to-gray-700">
+        {/* <div id="header-blur" className="pointer-events-none absolute inset-x-0 -bottom-16 h-24 bg-black/40 blur-2xl" /> */}
+        <BusinessCard />
+        <Demographics />
+      </header>
+
+      <Navigation />
+
+      <ProjectList />
+    </main>
   );
 }
