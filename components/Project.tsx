@@ -5,7 +5,6 @@ import Link from "next/link";
 export const Project = ({ project }: { project: ProjectDetails }) => {
   const imageClasses =
     "h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden";
-
   const imageStyle = { backgroundImage: `url('/images/${project.name}.png')` };
   // console.log(project)
   return (
