@@ -11,7 +11,7 @@ import { contactFormSubmit } from "../api/email";
 export default function ContactPage() {
   const [contactData, setContactData] = useState({});
 
-  const contactFormChange = (e) => {
+  const contactFormChange = (e: React.ChangeEvent<HTMLFormElement>) => {
     const { name, value } = e.target;
     setContactData({ ...contactData, [name]: value });
   };
@@ -25,6 +25,7 @@ export default function ContactPage() {
       <p className="mx-auto max-w-3xl text-center">
         Thank you for taking the time to learn more about me and my work.
       </p>
+
       <p className="mx-auto mt-2 max-w-3xl text-center">
         {`Please feel free to contact me if you have any questions or if you're interested in working together! I look forward to hearing from you.`}
       </p>
