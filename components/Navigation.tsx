@@ -22,7 +22,7 @@ export const Navigation = () => {
         Skills
       </Link>
       <Link
-        href="#contact"
+        href="/contact"
         className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-teal-500 transition-colors duration-200"
       >
         Contact
