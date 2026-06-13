@@ -59,7 +59,16 @@ export default async function ProjectsPage() {
   }
 
   return (
-    <div className="project-list-section min-h-screen flex items-center justify-center md:px-16 px-8">
+    <section className="project-page max-w-3xl mx-auto text-center text-gray-700 l px-4 py-8">
+      <h2 className="section-header text-2xl md:text-3xl font-bold text-purple-900 my-4">
+        My Projects
+      </h2>
+
+      <p className="intro-text max-w-3xl mx-auto text-center text-gray-700 text-lg md:text-xl px-4 py-8">
+        {`Outside of NDA work for the U.S. Navy and private companies, my projects showcase a wide range of modern web technologies and full stack experience. Notably, I completed a large project for Alternate Universes LLC, which is a Next.js frontend on top of a Headless WordPress backend. Please schedule a 1:1 demo to get a glimpse of my Alternate Universes LLC work!`}
+      </p>
+
+      <div className="project-list-section min-h-screen flex items-center justify-center md:px-16 px-8">
         <div className="m-8 relative space-y-4">
           {projectData &&
             projectData.length > 0 &&
@@ -67,6 +76,7 @@ export default async function ProjectsPage() {
               return <Project key={project.name} project={project} />;
             })}
         </div>
-    </div>
+      </div>
+    </section>
   );
 }

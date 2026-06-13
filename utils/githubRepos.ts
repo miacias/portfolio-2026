@@ -23,6 +23,7 @@ const projects = [
     createdDate: "March 25, 2024",
     updatedDate: "October 1st, 2025",
     isFeatured: true,
+    isFreelance: true,
   },
   {
     name: "d3-test",
@@ -34,6 +35,7 @@ const projects = [
   {
     name: "lees-cleaners",
     formattedName: "Lee's Cleaners",
+    isFreelance: true,
   },
   {
     name: "state-park-excursion",
@@ -119,6 +121,7 @@ export const setProjectDetails = (
         demoLink: findDemoVideo(project.formattedName || repo.name),
         description: project.description || repo.description,
         isFeatured: project.isFeatured || false,
+        isFreelance: project.isFreelance || false,
       };
     } else {
       // Create project details from projects array only
@@ -134,6 +137,7 @@ export const setProjectDetails = (
         updatedAt: project.updatedDate || "",
         repositoryTopics: project.repositoryTopics || { nodes: [] },
         isFeatured: project.isFeatured || false,
+        isFreelance: project.isFreelance || false,
       };
     }
   });

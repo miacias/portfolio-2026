@@ -29,8 +29,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="min-h-screen bg-gradient-to-b from-gray-100 via-gray-50 to-white">
-          <header className="header relative flex flex-col md:flex-row justify-center items-center md:items-end gap-16 bg-gradient-to-b from-black via-gray-900 to-gray-700">
+        <main className="min-h-screen bg-linear-to-b from-gray-100 via-gray-50 to-white">
+          <header className="header relative flex flex-col md:flex-row justify-center items-center md:items-end gap-16 bg-linear-to-b from-black via-gray-900 to-gray-700">
             {/* <div id="header-blur" className="pointer-events-none absolute inset-x-0 -bottom-16 h-24 bg-black/40 blur-2xl" /> */}
             <BusinessCard />
             <Demographics />
@@ -38,7 +38,9 @@ export default function RootLayout({
 
           <Navigation />
 
-          <div className="bg-orange-100">{children}</div>
+          <div className="bg-linear-to-b from-fuchsia-100 via-blue-200 to-cyan-100">
+            {children}
+          </div>
         </main>
       </body>
     </html>
